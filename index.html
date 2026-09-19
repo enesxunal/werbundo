@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Werbundo — Marken sichtbar machen</title>
+  <meta name="description" content="Werbundo GmbH — Branding, Werbetechnik, Ladenbau, Messebau und Digital aus Wesseling und Izmir." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Werbundo Startseite">
+      <img class="brand-logo" src="./assets/brand/werbundo-logo-w.png" alt="Werbundo" />
+    </a>
+
+    <nav class="nav">
+      <a href="#services" data-i18n="nav.services">Leistungen</a>
+      <a href="#work" data-i18n="nav.projects">Projekte</a>
+      <a href="#about" data-i18n="nav.about">Über uns</a>
+      <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang" type="button" id="langToggle" aria-label="Sprache wechseln">TR</button>
+      <a class="cta-small" href="#contact" data-i18n="nav.cta">Projekt besprechen</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="scroll-stage" aria-label="Werbundo Markenreise">
+      <div class="sticky-scene">
+        <canvas id="sequence" width="1600" height="900"></canvas>
+        <div class="shade"></div>
+
+        <div class="story-copy" aria-live="polite">
+          <div class="eyebrow">WERBUNDO / BRAND JOURNEY</div>
+          <h1 id="storyTitle">Alles beginnt mit einer Idee.</h1>
+          <p id="storyText">Wir gestalten, produzieren und bringen Marken in die reale und digitale Welt.</p>
+        </div>
+
+        <div class="progress-wrap" aria-hidden="true">
+          <div class="progress-track"><span id="progressFill"></span></div>
+          <span id="progressLabel">01 / 05</span>
+        </div>
+
+        <div class="scroll-hint"><span data-i18n="hero.scroll">Scrollen</span> <span>↓</span></div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="section-head">
+        <p data-i18n="services.kicker">DIE WELT VON WERBUNDO</p>
+        <h2 data-i18n="services.title">Drei Kompetenzfelder. Ein Team.</h2>
+        <span data-i18n="services.intro">Wählen Sie den passenden Bereich – oder verbinden Sie alle Leistungen in einem Projekt.</span>
+      </div>
+
+      <div class="service-grid">
+        <a class="service-card print" href="#" aria-label="Werbundo Print & Promotion">
+          <div class="card-topline">
+            <span class="card-number">01</span>
+            <span class="card-type" data-i18n="services.print.type">PRODUKTION & UMSETZUNG</span>
+          </div>
+
+          <div class="card-visual print-visual" aria-hidden="true">
+            <div class="print-sheet sheet-a"></div>
+            <div class="print-sheet sheet-b"></div>
+            <div class="print-roll"></div>
+            <div class="print-glow"></div>
+          </div>
+
+          <div class="card-content">
+            <p>WERBUNDO</p>
+            <h3>Print & Promotion</h3>
+            <span data-i18n="services.print.desc">Werbetechnik, Folierung, Druck, Promotion, Fahrzeugbeschriftung und Montage.</span>
+            <div class="card-tags">
+              <span data-i18n="services.print.tag1">Werbetechnik</span>
+              <span data-i18n="services.print.tag2">Folierung</span>
+              <span data-i18n="services.print.tag3">Druck</span>
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <span data-i18n="services.explore">Bereich entdecken</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </a>
+
+        <a class="service-card gastro" href="#" aria-label="Werbundo Gastro Puzzle">
+          <div class="card-topline">
+            <span class="card-number">02</span>
+            <span class="card-type" data-i18n="services.gastro.type">RAUM & ROLLOUT</span>
+          </div>
+
+          <div class="card-visual gastro-visual" aria-hidden="true">
+            <div class="gastro-arch"></div>
+            <div class="gastro-sign">W</div>
+            <div class="gastro-window"></div>
+            <div class="gastro-light"></div>
+          </div>
+
+          <div class="card-content">
+            <p>WERBUNDO</p>
+            <h3>Gastro Puzzle</h3>
+            <span data-i18n="services.gastro.desc">Konzept, Ladenbau, Franchise-Support und Rollout für Gastro-Marken.</span>
+            <div class="card-tags">
+              <span data-i18n="services.gastro.tag1">Ladenbau</span>
+              <span data-i18n="services.gastro.tag2">Franchise</span>
+              <span data-i18n="services.gastro.tag3">Rollout</span>
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <span data-i18n="services.explore">Bereich entdecken</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </a>
+
+        <a class="service-card digital" href="#" aria-label="Werbundo Marketing & Design">
+          <div class="card-topline">
+            <span class="card-number">03</span>
+            <span class="card-type" data-i18n="services.digital.type">CREATIVE & DIGITAL</span>
+          </div>
+
+          <div class="card-visual digital-visual" aria-hidden="true">
+            <div class="screen screen-back"></div>
+            <div class="screen screen-front">
+              <div class="screen-logo">W</div>
+            </div>
+            <div class="digital-orbit"></div>
+          </div>
+
+          <div class="card-content">
+            <p>WERBUNDO</p>
+            <h3>Marketing & Design</h3>
+            <span data-i18n="services.digital.desc">Branding, Grafik, Video, Social Media, Webdesign und Online-Marketing.</span>
+            <div class="card-tags">
+              <span data-i18n="services.digital.tag1">Branding</span>
+              <span data-i18n="services.digital.tag2">Social</span>
+              <span data-i18n="services.digital.tag3">Web</span>
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <span data-i18n="services.explore">Bereich entdecken</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="work-section" id="work">
+      <div class="work-copy">
+        <p>SELECTED WORK</p>
+        <h2 data-i18n="work.title">Von der Idee bis zur Umsetzung. Ein System.</h2>
+      </div>
+      <div class="work-placeholder">
+        <span data-i18n="work.placeholder">Hier beginnen später Portfolio und Projekt-Cases.</span>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div>
+        <p>WESSELING × İZMİR</p>
+        <h2 data-i18n="about.title">Produktion in Deutschland. Creative Power aus zwei Standorten.</h2>
+      </div>
+
+      <div class="about-cols">
+        <article>
+          <span>Wesseling</span>
+          <h3>Production & Execution</h3>
+          <p data-i18n="about.wesseling">Zentrale, Werkstatt, Druck, Produktion, Montage und deutschlandweite Umsetzung.</p>
+        </article>
+
+        <article>
+          <span>İzmir</span>
+          <h3>Creative & Digital</h3>
+          <p data-i18n="about.izmir">Grafik, Video, Social Media, Web, Branding und digitale Produktion.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-brand">
+      <img class="brand-logo footer-logo" src="./assets/brand/werbundo-logo-w.png" alt="Werbundo" />
+    </div>
+
+    <div class="footer-cta">
+      <p data-i18n="footer.question">Sie haben eine Idee?</p>
+      <a href="mailto:info@werbundo.de" data-i18n="footer.cta">Lassen Sie uns daraus Realität machen ↗</a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>Industriestraße 43 · 50389 Wesseling</span>
+      <span data-i18n="footer.locations">Wesseling · İzmir · deutschlandweit</span>
+      <span>© 2026 Werbundo GmbH</span>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
