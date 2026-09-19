@@ -23,8 +23,19 @@
     <div class="header-actions">
       <button class="lang" type="button" id="langToggle" aria-label="Sprache wechseln">TR</button>
       <a class="cta-small" href="#contact" data-i18n="nav.cta">Projekt besprechen</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav>
+      <a href="#services" data-i18n="nav.services">Leistungen</a>
+      <a href="#work" data-i18n="nav.projects">Projekte</a>
+      <a href="#about" data-i18n="nav.about">Über uns</a>
+      <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+    </nav>
+    <a class="mobile-menu-cta" href="#contact" data-i18n="nav.cta">Projekt besprechen</a>
+  </div>
 
   <main id="top">
     <section class="scroll-stage" aria-label="Werbundo Markenreise">

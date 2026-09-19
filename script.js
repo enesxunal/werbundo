@@ -8,11 +8,15 @@
   const stage = document.querySelector(".scroll-stage");
   const langToggle = document.getElementById("langToggle");
 
-  const frameCount = 160;
+  const isMobile = window.matchMedia("(max-width: 900px)").matches;
+  const frameCount = isMobile ? 100 : 160;
   const frames = [];
   let currentFrame = 0;
   let currentLang = "de";
   let lastStory = -1;
+  let targetProgress = 0;
+  let smoothProgress = 0;
+  let rafId = 0;
 
   const copy = {
     tr: {
@@ -105,7 +109,7 @@
   };
 
   const pad = n => String(n).padStart(3, "0");
-  const frameDir = window.matchMedia("(min-width: 901px)").matches ? "./assets/frames-hq" : "./assets/frames";
+  const frameDir = isMobile ? "./assets/frames-mobile" : "./assets/frames-hq";
 
   function loadFrame(i) {
     return new Promise(resolve => {
@@ -154,8 +158,8 @@
     return idx;
   }
 
-  function updateStory(force = false) {
-    const p = getProgress();
+  function updateStory(force = false, progress = getProgress()) {
+    const p = progress;
     const idx = storyIndex(p);
     const story = stories[currentLang][idx];
 
@@ -185,8 +189,7 @@
     updateStory(true);
   }
 
-  function update() {
-    const p = getProgress();
+  function renderProgress(p) {
     const nextFrame = Math.min(frameCount - 1, Math.round(p * (frameCount - 1)));
 
     if (nextFrame !== currentFrame && frames[nextFrame]) {
@@ -195,7 +198,24 @@
     }
 
     fill.style.width = (p * 100).toFixed(2) + "%";
-    updateStory();
+    updateStory(false, p);
+  }
+
+  function animateProgress() {
+    const ease = isMobile ? 0.18 : 0.28;
+    smoothProgress += (targetProgress - smoothProgress) * ease;
+    if (Math.abs(targetProgress - smoothProgress) < 0.0008) smoothProgress = targetProgress;
+    renderProgress(smoothProgress);
+    if (smoothProgress !== targetProgress) {
+      rafId = requestAnimationFrame(animateProgress);
+    } else {
+      rafId = 0;
+    }
+  }
+
+  function update() {
+    targetProgress = getProgress();
+    if (!rafId) rafId = requestAnimationFrame(animateProgress);
   }
 
   async function init() {
@@ -222,6 +242,29 @@
     langToggle.addEventListener("click", () => {
       applyLanguage(currentLang === "tr" ? "de" : "tr");
     });
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = () => {
+      if (!menuToggle || !mobileMenu) return;
+      menuToggle.classList.remove("is-open");
+      mobileMenu.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("menu-open");
+    };
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        const open = !mobileMenu.classList.contains("is-open");
+        menuToggle.classList.toggle("is-open", open);
+        mobileMenu.classList.toggle("is-open", open);
+        menuToggle.setAttribute("aria-expanded", String(open));
+        mobileMenu.setAttribute("aria-hidden", String(!open));
+        document.body.classList.toggle("menu-open", open);
+      });
+      mobileMenu.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+    }
 
     addEventListener("resize", resize, { passive: true });
     addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
