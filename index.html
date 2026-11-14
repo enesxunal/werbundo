@@ -15,7 +15,7 @@
 
     <nav class="nav">
       <a href="#services" data-i18n="nav.services">Leistungen</a>
-      <a href="#work" data-i18n="nav.projects">Projekte</a>
+      <a href="#work" data-i18n="nav.projects">Einblicke</a>
       <a href="#about" data-i18n="nav.about">Über uns</a>
       <a href="#contact" data-i18n="nav.contact">Kontakt</a>
     </nav>
@@ -30,7 +30,7 @@
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav>
       <a href="#services" data-i18n="nav.services">Leistungen</a>
-      <a href="#work" data-i18n="nav.projects">Projekte</a>
+      <a href="#work" data-i18n="nav.projects">Einblicke</a>
       <a href="#about" data-i18n="nav.about">Über uns</a>
       <a href="#contact" data-i18n="nav.contact">Kontakt</a>
     </nav>
@@ -66,17 +66,14 @@
       </div>
 
       <div class="service-grid">
-        <a class="service-card print" href="#" aria-label="Werbundo Print & Promotion">
+        <a class="service-card print" href="#capability-print" aria-label="Werbundo Print & Promotion – zum Leistungsbereich">
           <div class="card-topline">
             <span class="card-number">01</span>
             <span class="card-type" data-i18n="services.print.type">PRODUKTION & UMSETZUNG</span>
           </div>
 
           <div class="card-visual print-visual" aria-hidden="true">
-            <div class="print-sheet sheet-a"></div>
-            <div class="print-sheet sheet-b"></div>
-            <div class="print-roll"></div>
-            <div class="print-glow"></div>
+            <img class="service-scene" src="./assets/frames-hq/frame_060.webp" alt="3D Markenvisualisierung: leuchtendes Werbundo Zeichen in einer Architekturinszenierung" loading="lazy" decoding="async" />
           </div>
 
           <div class="card-content">
@@ -96,17 +93,14 @@
           </div>
         </a>
 
-        <a class="service-card gastro" href="#" aria-label="Werbundo Gastro Puzzle">
+        <a class="service-card gastro" href="#capability-gastro" aria-label="Werbundo Gastro Puzzle – zum Leistungsbereich">
           <div class="card-topline">
             <span class="card-number">02</span>
             <span class="card-type" data-i18n="services.gastro.type">RAUM & ROLLOUT</span>
           </div>
 
           <div class="card-visual gastro-visual" aria-hidden="true">
-            <div class="gastro-arch"></div>
-            <div class="gastro-sign">W</div>
-            <div class="gastro-window"></div>
-            <div class="gastro-light"></div>
+            <img class="service-scene" src="./assets/frames-hq/frame_090.webp" alt="3D Konzeptvisualisierung: Geschäftsfassade mit beleuchtetem Werbundo Schriftzeichen" loading="lazy" decoding="async" />
           </div>
 
           <div class="card-content">
@@ -126,18 +120,14 @@
           </div>
         </a>
 
-        <a class="service-card digital" href="#" aria-label="Werbundo Marketing & Design">
+        <a class="service-card digital" href="#capability-digital" aria-label="Werbundo Marketing & Design – zum Leistungsbereich">
           <div class="card-topline">
             <span class="card-number">03</span>
             <span class="card-type" data-i18n="services.digital.type">CREATIVE & DIGITAL</span>
           </div>
 
           <div class="card-visual digital-visual" aria-hidden="true">
-            <div class="screen screen-back"></div>
-            <div class="screen screen-front">
-              <div class="screen-logo">W</div>
-            </div>
-            <div class="digital-orbit"></div>
+            <img class="service-scene" src="./assets/frames-hq/frame_160.webp" alt="3D Konzeptvisualisierung: Laptop mit Werbundo Gestaltung und farbigen Lichtbahnen" loading="lazy" decoding="async" />
           </div>
 
           <div class="card-content">
@@ -159,13 +149,71 @@
       </div>
     </section>
 
-    <section class="work-section" id="work">
+    <section class="work-section" id="work" aria-labelledby="workTitle">
       <div class="work-copy">
-        <p>SELECTED WORK</p>
-        <h2 data-i18n="work.title">Von der Idee bis zur Umsetzung. Ein System.</h2>
+        <div>
+          <p class="work-kicker" data-i18n="work.kicker">EINBLICKE / LEISTUNGSWELTEN</p>
+          <span class="work-index">01 — 03</span>
+        </div>
+        <div>
+          <h2 id="workTitle" data-i18n="work.title">Ideen werden sichtbar. Auf jedem Kanal.</h2>
+          <p class="work-intro" data-i18n="work.intro">Von sichtbarer Werbung über Räume mit Charakter bis zur digitalen Markenwelt. Entdecken Sie drei Wege, wie wir Marken gestalten und weiterdenken.</p>
+        </div>
       </div>
-      <div class="work-placeholder">
-        <span data-i18n="work.placeholder">Hier beginnen später Portfolio und Projekt-Cases.</span>
+
+      <div class="showcase-grid" aria-label="Werbundo Leistungswelten">
+        <article class="showcase-card showcase-card-large" id="capability-print">
+          <div class="showcase-media">
+            <img src="./assets/frames-hq/frame_060.webp" alt="Werbundo 3D Markenwelt mit beleuchtetem Logo" loading="lazy" decoding="async" />
+            <span class="showcase-media-label" data-i18n="work.visual">WERBUNDO / KONZEPTVISUALISIERUNG</span>
+          </div>
+          <div class="showcase-info">
+            <div class="showcase-heading"><span>01 / PRINT & PROMOTION</span><h3 data-i18n="work.print.title">Marken, die man nicht übersieht.</h3></div>
+            <p data-i18n="work.print.text">Werbetechnik, Druck und Folierung schaffen Präsenz – am Standort, auf Fahrzeugen und überall dort, wo Menschen Marken begegnen.</p>
+            <a href="mailto:info@werbundo.de?subject=Anfrage%20Print%20%26%20Promotion" class="showcase-link"><span data-i18n="work.cta">Projekt anfragen</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="showcase-card" id="capability-gastro">
+          <div class="showcase-media">
+            <img src="./assets/frames-hq/frame_090.webp" alt="Werbundo 3D Konzept einer beleuchteten Markenfassade" loading="lazy" decoding="async" />
+            <span class="showcase-media-label" data-i18n="work.visual">WERBUNDO / KONZEPTVISUALISIERUNG</span>
+          </div>
+          <div class="showcase-info">
+            <div class="showcase-heading"><span>02 / GASTRO PUZZLE</span><h3 data-i18n="work.gastro.title">Aus Konzepten werden Orte.</h3></div>
+            <p data-i18n="work.gastro.text">Von der Markenidee bis zum räumlichen Auftritt: Ladenbau, Gestaltung, Werbetechnik und Rollout greifen ineinander.</p>
+            <a href="mailto:info@werbundo.de?subject=Anfrage%20Gastro%20Puzzle" class="showcase-link"><span data-i18n="work.cta">Projekt anfragen</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="showcase-card" id="capability-digital">
+          <div class="showcase-media">
+            <img src="./assets/frames-hq/frame_160.webp" alt="Werbundo 3D Digitalwelt mit Laptop und Markeninszenierung" loading="lazy" decoding="async" />
+            <span class="showcase-media-label" data-i18n="work.visual">WERBUNDO / KONZEPTVISUALISIERUNG</span>
+          </div>
+          <div class="showcase-info">
+            <div class="showcase-heading"><span>03 / MARKETING & DESIGN</span><h3 data-i18n="work.digital.title">Gestaltung, die weiterwirkt.</h3></div>
+            <p data-i18n="work.digital.text">Branding, Web, Social Media und Bewegtbild übersetzen Marken in digitale Erlebnisse – klar, konsistent und wiedererkennbar.</p>
+            <a href="mailto:info@werbundo.de?subject=Anfrage%20Marketing%20%26%20Design" class="showcase-link"><span data-i18n="work.cta">Projekt anfragen</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="approach-section" id="approach" aria-labelledby="approachTitle">
+      <div class="approach-head">
+        <div><span class="section-eyebrow" data-i18n="approach.kicker">UNSER ANSATZ</span><h2 id="approachTitle" data-i18n="approach.title">Eine Idee. Viele Möglichkeiten. Ein Prozess.</h2></div>
+        <p data-i18n="approach.intro">Ob einzelne Leistung oder ganzheitlicher Markenauftritt: Wir verbinden kreative Planung mit konkreter Umsetzung.</p>
+      </div>
+      <div class="approach-layout">
+        <div class="approach-visual">
+          <img src="./assets/frames-hq/frame_032.webp" loading="lazy" decoding="async" alt="3D Interpretation des farbigen Werbundo Markensymbols" />
+          <span class="approach-image-caption">WERBUNDO / FROM IDEA TO IMPACT</span>
+        </div>
+        <ol class="approach-steps">
+          <li><span>01</span><div><h3 data-i18n="approach.step1.title">Verstehen & beraten</h3><p data-i18n="approach.step1.text">Wir klären Ziele, Einsatzorte, Anforderungen und die passende Richtung.</p></div></li>
+          <li><span>02</span><div><h3 data-i18n="approach.step2.title">Entwerfen & planen</h3><p data-i18n="approach.step2.text">Aus Gedanken werden Konzepte, Gestaltung und konkrete Produktionsschritte.</p></div></li>
+          <li><span>03</span><div><h3 data-i18n="approach.step3.title">Produzieren & realisieren</h3><p data-i18n="approach.step3.text">Wir bringen Ideen in Form – vom Druck bis zur Markenpräsenz im Raum.</p></div></li>
+          <li><span>04</span><div><h3 data-i18n="approach.step4.title">Begleiten & entwickeln</h3><p data-i18n="approach.step4.text">Wir denken den nächsten Schritt mit, analog und digital.</p></div></li>
+        </ol>
       </div>
     </section>
 
@@ -175,6 +223,7 @@
         <h2 data-i18n="about.title">Produktion in Deutschland. Creative Power aus zwei Standorten.</h2>
       </div>
 
+      <div class="about-intro" data-i18n="about.intro">Zwei Perspektiven, ein gemeinsamer Anspruch: Gestaltung und Umsetzung so verbinden, dass aus Ideen ein stimmiges Ganzes wird.</div>
       <div class="about-cols">
         <article>
           <span>Wesseling</span>
@@ -191,6 +240,11 @@
     </section>
   </main>
 
+  <section class="contact-band" aria-labelledby="contactBandTitle">
+    <div class="contact-band-image" aria-hidden="true"><img src="./assets/frames-hq/frame_120.webp" alt="" loading="lazy" decoding="async" /></div>
+    <div class="contact-band-content"><span class="section-eyebrow" data-i18n="contact.kicker">BEREIT FÜR DEN NÄCHSTEN SCHRITT?</span><h2 id="contactBandTitle" data-i18n="contact.title">Ihre Marke verdient einen starken Auftritt.</h2><a href="mailto:info@werbundo.de?subject=Projektanfrage%20Werbundo" class="contact-band-button"><span data-i18n="contact.cta">Projekt besprechen</span><span aria-hidden="true">↗</span></a></div>
+  </section>
+
   <footer class="site-footer" id="contact">
     <div class="footer-brand">
       <img class="brand-logo footer-logo" src="./assets/brand/werbundo-logo-w.png" alt="Werbundo" />
@@ -206,6 +260,7 @@
       <span data-i18n="footer.locations">Wesseling · İzmir · deutschlandweit</span>
       <span>© 2026 Werbundo GmbH</span>
     </div>
+    <div class="footer-links"><a href="#services" data-i18n="nav.services">Leistungen</a><a href="#work" data-i18n="nav.projects">Einblicke</a><a href="#approach" data-i18n="nav.approach">Unser Ansatz</a><a href="mailto:info@werbundo.de">info@werbundo.de</a></div>
   </footer>
 
   <script src="./script.js"></script>
